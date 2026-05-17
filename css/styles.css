@@ -1,0 +1,199 @@
+/* Illuminate Star Services — site styles */
+
+:root {
+  --bg: #0b1020;
+  --bg-elevated: #121a33;
+  --text: #e8edf7;
+  --text-muted: #9aa7c7;
+  --accent: #6ec3ff;
+  --accent-soft: rgba(110, 195, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.08);
+  --maxw: 42rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% -10%, #1a2850 0%, transparent 55%),
+    radial-gradient(900px 600px at 100% 20%, #152238 0%, transparent 50%),
+    var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  z-index: 100;
+}
+
+.wrap {
+  max-width: calc(var(--maxw) + 3rem);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-size: clamp(1.5rem, 4vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.35rem;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+main h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.65rem;
+  color: var(--text);
+}
+
+main p {
+  margin: 0 0 0.85rem;
+  color: var(--text-muted);
+}
+
+main p:last-child {
+  margin-bottom: 0;
+}
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.services ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.links a {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  font-size: 0.98rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+footer p {
+  margin: 0 0 0.5rem;
+}
+
+/* Privacy page */
+article.privacy {
+  max-width: var(--maxw);
+}
+
+article.privacy h1 {
+  font-size: clamp(1.4rem, 3.5vw, 1.75rem);
+  margin: 0 0 1rem;
+}
+
+article.privacy h2 {
+  font-size: 1.05rem;
+  margin: 1.75rem 0 0.5rem;
+}
+
+article.privacy p,
+article.privacy li {
+  color: var(--text-muted);
+}
+
+article.privacy ul {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+}
+
+article.privacy .meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.nav-back {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
